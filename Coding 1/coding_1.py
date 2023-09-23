@@ -1,6 +1,7 @@
 '''Permutations in l33t speak!'''
 
-l33t_dict = {'a':'4', # Collection of common l33t corrections
+# Collection of common l33t corrections
+l33t_dict = {'a':'4',
              'e':'3',
              'i':'1',
              'o':'0'}
@@ -9,7 +10,8 @@ l33t_dict = {'a':'4', # Collection of common l33t corrections
 def permutations(word, start=0):
     '''Generates all permutations of a given word'''
     if start == len(word):
-        print(''.join(word)) # Joins the given word list with '' and prints it as one word
+        # Joins the given word list with '' and prints it as one word
+        print(''.join(word))
     else:
         for i in range(start, len(word)):
             # Swap characters at positions start and i
@@ -22,13 +24,27 @@ def permutations(word, start=0):
 
 def l33t_speak():
     '''Creative Element: Converts normal characters to l33t speak'''
-    for i, val in enumerate(input_word): # Enumerates over the characters
+    # Enumerates over the characters
+    for i, val in enumerate(input_word):
         if val in l33t_dict:
-            input_word[i] = l33t_dict[input_word[i]] # Changes character to l33t correction
+            # Changes character to l33t correction
+            input_word[i] = l33t_dict[input_word[i]]
 
 
-input_word = input("Enter a word: ") # Input word
-input_word = list(input_word)  # Converts the input string to a list of characters
+# Input word
+input_word = input("Enter a word: ")
+# Converts the input string to a list of characters
+input_word = list(input_word)
 
 l33t_speak()
 permutations(input_word)
+
+# Thoughts
+
+#This was a fun assignment and it gave me the opportunity to step through a program over and over
+#until I understood the concept of recursion, which is very tricky and still hard to wrap my
+#head around. For the creative element I used a dictionary to make key and value pairs of
+#commmon "l33t speak" changes. the l33t_speak function enumerates the input_word list and
+#compares each character with the keys in the dictionary and makes the change if applicable.
+
+#Use the word "haxor" for a good example.
