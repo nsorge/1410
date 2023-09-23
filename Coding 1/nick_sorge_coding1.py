@@ -7,6 +7,21 @@ l33t_dict = {'a':'4',
              'o':'0'}
 
 
+def get_word():
+    global input_word
+    while True:
+        # Input word
+        input_word = input("Enter a word: ")
+        # Converts the input string to a list of characters
+        input_word = list(input_word)
+        # Checks input word for repeating characters
+        for i, val in enumerate(input_word):
+            if val in input_word:
+                print('Try a word that does not repeat characters.')
+                break
+        return False
+
+
 def permutations(word, start=0):
     '''Generates all permutations of a given word'''
     if start == len(word):
@@ -22,22 +37,20 @@ def permutations(word, start=0):
             word[start], word[i] = word[i], word[start]
 
 
-def l33t_speak():
+def l33t_speak(word):
     '''Creative Element: Converts normal characters to l33t speak'''
     # Enumerates over the characters
-    for i, val in enumerate(input_word):
+    for i, val in enumerate(word):
         if val in l33t_dict:
             # Changes character to l33t correction
-            input_word[i] = l33t_dict[input_word[i]]
+            word[i] = l33t_dict[word[i]]
 
+def main():
+    get_word()
+    l33t_speak(input_word)
+    permutations(input_word)
 
-# Input word
-input_word = input("Enter a word: ")
-# Converts the input string to a list of characters
-input_word = list(input_word)
-
-l33t_speak()
-permutations(input_word)
+main()
 
 # Thoughts
 
