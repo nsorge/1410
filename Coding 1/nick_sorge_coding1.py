@@ -41,6 +41,7 @@ def l33t_speak(word):
         if val in l33t_dict:
             word[i] = l33t_dict[word[i]]
 
+
 def main():
     '''Main'''
     while True:
@@ -61,6 +62,7 @@ def main():
         break
     l33t_speak(input_word)
     permutations(input_word)
+
 
 if __name__ == '__main__':
     main()
