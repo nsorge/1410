@@ -75,6 +75,6 @@ if __name__ == '__main__':
 #compares each character with the keys in the dictionary and makes the change if applicable.
 #I could not figure out how to make the try except format work because having numbers or
 #repeating characters did not create a python error code I could use to except the try so
-#I used if else statements instead. 
+#I used if else statements instead.
 
 #Use the word "haxor" for a good example.
