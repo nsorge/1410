@@ -58,8 +58,7 @@ def main():
         if check_repeat(input_word):
             print('Try a word that does not repeat letters.')
             continue
-        else:
-            break
+        break
     l33t_speak(input_word)
     permutations(input_word)
 
@@ -77,4 +76,4 @@ if __name__ == '__main__':
 #repeating characters did not create a python error code I could use to except the try so
 #I used if else statements instead.
 
-#Use the word "haxor" for a good example.
+#Use the word "haxor" for a good example of the programs creative element.
